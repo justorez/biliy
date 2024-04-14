@@ -1,0 +1,45 @@
+{
+  "name": "@biliy/cli",
+  "version": "1.0.0",
+  "description": "Bilibili command line tool, download danmaku",
+  "packageManager": "pnpm@8.15.6",
+  "type": "module",
+  "bin": {
+    "biliy": "dist/index.js"
+  },
+  "scripts": {},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:justorez/biliy.git"
+  },
+  "keywords": [
+    "cli",
+    "bilibili",
+    "danmaku",
+    "ass"
+  ],
+  "author": "justorez",
+  "license": "MIT",
+  "bugs": {
+    "url": "git@github.com:justorez/biliy/issues"
+  },
+  "homepage": "git@github.com:justorez/biliy.git#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "axios": "^1.6.8",
+    "commander": "^12.0.0"
+  },
+  "dependencies": {
+    "@biliy/dm2ass": "workspace:*"
+  }
+}

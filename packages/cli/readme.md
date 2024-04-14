@@ -1,3 +1,3 @@
-# biliy
+# @biliy/cli
 
 > Work in progress...

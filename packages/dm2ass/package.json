@@ -1,0 +1,45 @@
+{
+  "name": "@biliy/dm2ass",
+  "version": "1.0.0",
+  "description": "Convert bilibili danmaku to ass subtitle",
+  "author": "justoerz",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.mjs",
+    "types": "./dist/index.d.ts"
+  },
+  "scripts": {},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "danmaku",
+    "bilibili",
+    "ass"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:justorez/biliy.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "git@github.com:justorez/biliy/issues"
+  },
+  "homepage": "git@github.com:justorez/biliy.git#readme",
+  "devDependencies": {
+    "@types/xml-parser": "^1.2.33",
+    "xml-parser": "^1.2.1"
+  },
+  "dependencies": {
+    "canvas": "^2.10.2"
+  }
+}

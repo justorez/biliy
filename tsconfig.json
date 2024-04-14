@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "strict": true,
+    "rootDir": ".",
+    "outDir": "temp",
     "module": "ESNext",
     "target": "ESNext",
     "lib": ["ES2020"],
@@ -11,11 +13,8 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "types": ["node", "vitest/globals"],
-    "paths": {
-      "@/*": ["./src/*"],
-      "src/*": ["./src/*"]
-    }
+    "noImplicitAny": false,
+    "types": ["node", "vitest/globals"]
   },
-  "include": ["src/**/*.ts"]
+  "include": ["packages/*/src"]
 }
