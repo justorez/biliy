@@ -4,7 +4,7 @@ import axios from 'axios'
 /**
  * API 参考文档：https://github.com/SocialSisterYi/bilibili-API-collect/
  */
-class Biliy {
+export class Biliy {
     bv2aid(bvid: string) {
         const XOR_CODE = 23442827791579n
         const MASK_CODE = 2251799813685247n
@@ -38,19 +38,20 @@ class Biliy {
 
         const pagelist = await this.pagelist(bv)
         const promises = pagelist.map(async (p) => {
-            const res = await axios.get(
+            const res = await axios.get<string>(
                 `https://comment.bilibili.com/${p.cid}.xml`,
                 {
                     responseType: 'text'
                 }
             )
             return {
-                title: p.part,
-                xml: res.data
+                title: p.part.trim(),
+                xml: res.data,
+                dimension: p.dimension
             }
         })
         return Promise.all(promises)
     }
 }
 
-export const biliy = new Biliy()
+export default new Biliy()

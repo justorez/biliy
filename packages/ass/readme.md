@@ -1,22 +1,22 @@
-# @biliy/dm2ass
+# @biliy/ass
 
 > forked from https://github.com/otakustay/danmaku-to-ass
 
 ## Installation
 
 ```bash
-pnpm add @biliy/dm2ass
+pnpm add @biliy/ass
 ```
 
 ## Quick Example
 
 ```js
 import fs from 'fs'
-import dm2ass from '@biliy/dm2ass'
+import { generateASS } from '@biliy/ass'
 
 const filename = 'example.xml'
 const xmlText = fs.readFileSync(filename, 'utf-8')
-const assText = dm2ass(xmlText, { filename, title: 'Quick Example' })
+const assText = generateASS(xmlText, { filename, title: 'Quick Example' })
 fs.writeFileSync(`${filename}.ass`, assText, 'utf-8')
 ```
 

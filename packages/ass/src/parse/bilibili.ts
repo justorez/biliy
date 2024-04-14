@@ -1,6 +1,6 @@
 import parseXML from 'xml-parser'
 import { Danmaku, DanmakuType, FontSize } from '../types'
-import { decimalColorToRGB } from '../util/index'
+import { decimalColorToRGB } from '../util'
 
 // Bilibili的弹幕XML结构如下：
 //

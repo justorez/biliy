@@ -40,12 +40,17 @@ const splitGrids = ({ fontSize, padding, playResY, bottomSpace }) => {
     }
 }
 
-const measureTextWidth = (() => {
+export const measureTextWidth = (() => {
     const canvasContext = createCanvas(50, 50).getContext('2d')
     const supportTextMeasure = !!canvasContext.measureText('中')
 
     if (supportTextMeasure) {
-        return (fontName, fontSize, bold, text) => {
+        return (
+            fontName: string,
+            fontSize: number,
+            bold: boolean,
+            text: string
+        ) => {
             canvasContext.font = `${bold ? 'bold' : 'normal'} ${fontSize}px ${fontName}`
             const textWidth = canvasContext.measureText(text).width
             return Math.round(textWidth)
@@ -55,7 +60,8 @@ const measureTextWidth = (() => {
     console.warn(
         '[Warn] node-canvas is installed without text measure support, layout may not be correct'
     )
-    return (fontName, fontSize, bold, text) => text.length * fontSize
+    return (fontName, fontSize: number, bold, text: string) =>
+        text.length * fontSize
 })()
 
 // 找到能用的行
@@ -115,7 +121,7 @@ const initializeLayout = (config: SubtitleStyle) => {
     const grids = splitGrids(config)
     const gridHeight = defaultFontSize + paddingTop + paddingBottom
 
-    return (danmaku) => {
+    return (danmaku: Danmaku) => {
         const targetGrids = grids[danmaku.type]
         const danmakuFontSize = fontSize[danmaku.fontSizeType]
         const rectWidth =

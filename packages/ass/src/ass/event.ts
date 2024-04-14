@@ -1,6 +1,7 @@
+import { Danmaku, SubtitleStyle } from '../types'
 import dialogue from './dialogue'
 
-export default (list, config) => {
+export default (list: Danmaku[], config: SubtitleStyle) => {
     const content = [
         '[Events]',
         'Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text',

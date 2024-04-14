@@ -12,8 +12,8 @@ const convertBlockRule = (rule: string) =>
 
 export default (overrides = {}): SubtitleStyle => {
     const defaults = {
-        fontSize: [14, 16, 18],
-        fontName: '黑体',
+        fontSize: [16, 16, 25],
+        fontName: 'SimHei',
         color: '#ffffff',
         outlineColor: null,
         backColor: null,

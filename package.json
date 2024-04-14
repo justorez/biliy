@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Bilibili command line tool, download danmaku",
   "packageManager": "pnpm@8.15.6",
+  "private": true,
   "type": "module",
   "scripts": {
     "postinstall": "simple-git-hooks",
-    "build": "rollup -c",
+    "build": "rollup -c && pnpm build-dts",
     "build-dts": "rimraf temp && tsc -p tsconfig.build.json && rollup -c rollup.dts.config.js",
     "clean": "rimraf packages/*/dist temp .eslintcache .stats",
     "test": "vitest",

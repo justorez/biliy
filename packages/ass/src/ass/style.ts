@@ -50,7 +50,7 @@ export default ({
     const boldValue = bold ? '1' : '0'
     const fontStyle = `${boldValue},0,0,0,100,100,0,0,1,${outline},${shadow},7,0,0,0,0`
 
-    const fontDeclaration = (size, i) =>
+    const fontDeclaration = (size: number, i: number) =>
         `Style: F${i},${fontName},${size},${colorStyle},${fontStyle}`
     const content = [
         '[V4+ Styles]',

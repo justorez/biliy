@@ -5,7 +5,7 @@
   "packageManager": "pnpm@8.15.6",
   "type": "module",
   "bin": {
-    "biliy": "dist/index.js"
+    "biliy": "dist/index.mjs"
   },
   "scripts": {},
   "publishConfig": {
@@ -40,6 +40,6 @@
     "commander": "^12.0.0"
   },
   "dependencies": {
-    "@biliy/dm2ass": "workspace:*"
+    "@biliy/ass": "workspace:*"
   }
 }
