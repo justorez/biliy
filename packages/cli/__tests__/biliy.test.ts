@@ -1,5 +1,5 @@
 import { test, expect, describe } from 'vitest'
-import { biliy } from '../src/sdk'
+import biliy from '../src/sdk'
 
 describe('Test biliy sdk', () => {
     test('bvid to avid', () => {
