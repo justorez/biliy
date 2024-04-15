@@ -24,7 +24,7 @@ fs.writeFileSync(`${filename}.ass`, assText, 'utf-8')
 // default subtitle style
 // convert function options.substyle
 {
-    fontSize: [14, 16, 18],
+    fontSize: [25, 25, 36],
     fontName: '黑体',
     color: '#ffffff',
     outlineColor: null,
