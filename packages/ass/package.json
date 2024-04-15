@@ -1,6 +1,6 @@
 {
   "name": "@biliy/ass",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Convert bilibili danmaku to ass subtitle",
   "author": "justoerz",
   "type": "module",

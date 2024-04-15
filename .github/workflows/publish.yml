@@ -27,8 +27,10 @@ jobs:
           registry-url: https://registry.npmjs.org
           cache: 'pnpm'
 
-      - name: Setup npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      - name: Install deps for building node-canvas
+        run: |
+          sudo apt update
+          sudo apt install -y libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev librsvg2-dev
 
       - name: Install deps and build
         run: |
@@ -36,4 +38,6 @@ jobs:
           pnpm build
 
       - name: Publish package
-        run: pnpm publish -r
+        run: pnpm publish -r --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

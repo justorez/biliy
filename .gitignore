@@ -1,6 +1,7 @@
 temp/
 stats.html
 .stats/
+.npmrc
 
 # Logs
 logs

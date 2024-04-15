@@ -1,6 +1,6 @@
 {
   "name": "biliy",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Bilibili command line tool, download danmaku",
   "packageManager": "pnpm@8.15.6",
   "private": true,
