@@ -36,7 +36,7 @@
   "homepage": "git@github.com:justorez/biliy.git#readme",
   "devDependencies": {
     "@types/node": "^20.11.16",
-    "axios": "^1.6.8",
+    "axios": "^1.7.4",
     "commander": "^12.0.0"
   },
   "dependencies": {
